@@ -15,10 +15,20 @@ gcc -o hash.o -c ../lib/_hash.c && gcc -o report report_digit_analysis_v1.c hash
 gcc -o hash.o -c ../lib/_hash.c && gcc -o report report_digit_analysis_v2.c hash.o && ./report
 ```
 
-## Results with table size = 100000
+## Results with table size = 100000, keys 0...2000000000
 
 | Hash Method | Number of keys | Collisions |
 | :-------------     |:-------------:| -----:|
+| Digit Analysis v1 | 20000   | 3522 |
+| Digit Analysis v2 | 20000   | 3457 |
+| Digit Analysis v1 | 40000   | 15933 |
+| Digit Analysis v2 | 40000   | 15765 |
+| Digit Analysis v1 | 60000   | 40447 |
+| Digit Analysis v2 | 60000   | 40152 |
+| Digit Analysis v1 | 80000   | 79485 |
+| Digit Analysis v2 | 80000   | 78995 |
+| Digit Analysis v1 | 100000  | 134434 |
+| Digit Analysis v2 | 100000  | 133881 |
 | Division          | 200000  | 145173 |
 | Fold Method       | 200000  | 145211 |
 | Half Square       | 200000  | 185966 |
